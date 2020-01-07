@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:http/http.dart';
 
 void main() => runApp(MyApp());
@@ -10,11 +11,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+//      debugShowCheckedModeBanner: false,
+//      showSemanticsDebugger:true,
+//      debugShowMaterialGrid:true,
+      title: 'Flutter企业站',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
+//        primaryColor: Colors.red,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // 加载页面
+      home: Text('加载中...'),
+      // 添加路由
+      routes: {
+        '/company_info': (context) => WebviewScaffold(
+            url: 'https://www.baidu.com',
+            appBar: AppBar(
+              title: Text('公司介绍'),
+            )),
+        '/app': (context) => MyHomePage(title: 'Flutter Demo Home Page')
+      },
     );
   }
 }
@@ -45,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           child: Text("获取商品信息"),
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

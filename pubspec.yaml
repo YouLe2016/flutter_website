@@ -28,6 +28,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   http: ^0.12.0+3
+  flutter_webview_plugin: ^0.3.10+1
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,6 @@ flutter:
   # They also do not have any bearing on your native host application's
   # identifiers, which may be completely independent or the same as these.
   module:
-    androidX: false
+    androidX: true
     androidPackage: com.wyl.flutter_website
     iosBundleIdentifier: com.wyl.flutterWebsite
