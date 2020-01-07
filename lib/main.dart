@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:http/http.dart';
 
+import 'app.dart';
 import 'loading.dart';
 
 void main() => runApp(MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: Text('公司介绍'),
             )),
-        '/app': (context) => MyHomePage(title: 'Flutter Demo Home Page')
+        '/app': (context) => AppPage()
       },
     );
   }

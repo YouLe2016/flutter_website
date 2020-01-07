@@ -28,7 +28,7 @@ class _LoadingPageState extends State<LoadingPage> {
           ),
         ),
         child: Text(
-          'flutter企业站',
+          'Flutter企业站',
           style: TextStyle(
             fontSize: 36,
             color: Colors.white,
