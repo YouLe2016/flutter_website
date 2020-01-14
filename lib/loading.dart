@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'res.dart';
+
 class LoadingPage extends StatefulWidget {
   @override
   _LoadingPageState createState() => _LoadingPageState();
@@ -23,7 +25,7 @@ class _LoadingPageState extends State<LoadingPage> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/loading.jpg"),
+            image: AssetImage(imgLoading),
             fit: BoxFit.fill,
           ),
         ),

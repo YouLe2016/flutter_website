@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_website/res.dart';
+
+import 'home_banner.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('HomePage'),
-    );
+    return ListView(children: <Widget>[
+      Image.asset(imgBanners[0]),
+      BannerWidget(),
+    ]);
   }
 }
