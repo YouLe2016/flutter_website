@@ -12,6 +12,7 @@ class BannerWidget extends StatelessWidget {
       width: width,
       height: height,
       child: Swiper(
+        autoplay: true,
         itemBuilder: (BuildContext context, int index) {
           return Image.asset(
             imgBanners[index],
